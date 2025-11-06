@@ -107,7 +107,7 @@ def run_demo(demo_number):
         # Execute the demo
         with open(demo_path, 'r', encoding='utf-8') as f:
             code = f.read()
-            exec(code, {'__name__': '__main__'})
+            exec(code, {'__name__': '__main__', '__file__': demo_path})
 
         print("\n" + "=" * 80)
         print_success(f"Demo {demo_number} completed!")
